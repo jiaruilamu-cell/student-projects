@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>基本信息</title>
+    &nbsp;    &nbsp;
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="form-container">
+<h2>基本信息</h2>
+<form id="basic-info-form">
+<!-- 登录名 -->
+<div class="form-group">
+<label for="username">登录名:</label>
+<input type="text" id="username" name="username" value="example@example.com">
+<button onclick="changePassword()">修改密码</button>
+</div>
+
+<!-- 昵称 -->
+<div class="form-group">
+<label for="nickname">昵 称:</label>
+<input type="text" id="nickname" name="nickname">
+<p>用户你好，微博允许普通用户一年修改一次昵，请谨慎提交，橙V、蓝V认证用户修改次数请见详细规则，<a href="#">查看详细规则&gt;&gt;</a></p>
+</div>
+
+<!-- 所在地 -->
+<div class="form-group">
+<label for="location">所在地:</label>
+<select id="province" name="province" onchange="loadCities(this.value)">
+<option value="">请选择省份</option>
+</select>
+<select id="city" name="city" disabled>
+<option value="">请选择城市</option>
+</select>
+</div>
+
+
+<!-- 性别 -->
+<div class="form-group">
+<label for="gender">性 别:</label>
+<div>
+<input type="radio" id="male" name="gender" value="男">
+<label for="male">男</label>
+<input type="radio" id="female" name="gender" value="女">
+<label for="female">女</label>
+</div>
+</div>
+
+<div>
+<!-- 其他字段... -->
+
+<!-- 提交按钮 -->
+<button type="submit">保存</button>
+</div>
+</form>
+</div>
+
+<script src="111.js"></script>
+</body>
+</html>
